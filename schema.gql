@@ -1,0 +1,37 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type User {
+  id: Int!
+  email: String!
+  name: String!
+}
+
+type Query {
+  hello: String!
+  users(pagination: UserPaginationInput): [User!]!
+  user(id: Int!): User!
+}
+
+input UserPaginationInput {
+  page: Int! = 1
+  limit: Int! = 10
+}
+
+type Mutation {
+  createUser(data: CreateUserInput!): User!
+  updateUser(data: UpdateUserInput!): User!
+  removeUser(id: Int!): User!
+}
+
+input CreateUserInput {
+  email: String!
+  name: String!
+}
+
+input UpdateUserInput {
+  email: String
+  name: String
+  id: Int!
+}
