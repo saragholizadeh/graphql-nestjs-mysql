@@ -106,7 +106,7 @@ npm run start:dev
 
 ```
 
--- 🔹 Example GraphQL Queries / Mutations
+-🔹 Example GraphQL Queries / Mutations
 
 - Users
 
