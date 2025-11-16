@@ -51,31 +51,60 @@ npm run start:dev
 
 - 📚 Project Structure
 
-src/
- ├─ common/                   <-- Generic reusable code
- │   └─ base.repository.ts    <-- Generic Repository
- ├─ prisma/
- │   └─ prisma.service.ts     <-- Prisma client wrapper
- ├─ user/
- │   ├─ dto/
- │   ├─ user.model.ts/
- │   ├─ user.repository.ts
- │   ├─ user.service.ts
- │   └─ user.resolver.ts
- ├─ course/
- │   ├─ dto/
- │   ├─ course.model.ts/
- │   ├─ course.repository.ts
- │   ├─ course.service.ts
- │   └─ course.resolver.ts
- ├─ enrollment/
- │   ├─ dto/
- │   ├─ enrollment.model.ts/
- │   ├─ enrollment.repository.ts
- │   ├─ enrollment.service.ts
- │   └─ enrollment.resolver.ts
- └─ app.module.ts
+```bash
 
+├── common
+│   └── base.repository.ts
+├── package.json
+├── package-lock.json
+├── prisma
+│   ├── migrations
+│   ├── prisma.module.ts
+│   ├── prisma.service.ts
+│   ├── schema.prisma
+│   └── seed.ts
+├── prisma.config.ts
+├── schema.gql
+├── src
+│   ├── app.module.ts
+│   ├── app.resolver.ts
+│   ├── app.service.ts
+│   ├── course
+│   │   ├── course.model.ts
+│   │   ├── course.module.ts
+│   │   ├── course.repository.ts
+│   │   ├── course.resolver.ts
+│   │   ├── course.service.ts
+│   │   └── dto
+│   │       ├── course-pagination.input.ts
+│   │       ├── create-course.input.ts
+│   │       └── update-course.input.ts
+│   ├── enrollment
+│   │   ├── dto
+│   │   │   ├── create-enrollment.input.ts
+│   │   │   ├── enrollment-pagination.input.ts
+│   │   │   └── update-enrollment.input.ts
+│   │   ├── enrollment.model.ts
+│   │   ├── enrollment.module.ts
+│   │   ├── enrollment.repository.ts
+│   │   ├── enrollment.resolver.ts
+│   │   └── enrollment.service.ts
+│   ├── main.ts
+│   └── user
+│       ├── dto
+│       │   ├── create-user.input.ts
+│       │   ├── update-user.input.ts
+│       │   └── user-pagination.input.ts
+│       ├── user.model.ts
+│       ├── user.module.ts
+│       ├── user.repository.ts
+│       ├── user.resolver.ts
+│       └── user.service.ts
+├── tsconfig.build.json
+└── tsconfig.json
+
+
+```
 
 -- 🔹 Example GraphQL Queries / Mutations
 
